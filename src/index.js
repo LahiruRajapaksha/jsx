@@ -1,17 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
+// Create react component
+const App = () => {
+  return (
+    <div className="ui container">
+      <div className ="comment">
+        <a href="/" className="avatar">
+          <img alt="avatar"/>
+        </a>
+        <div className="content">
+          <a href="/" className="author">
+            Sam
+          </a>
+          <div className="metadata">
+            <span className="date">Today at 6:00 PM</span>
+          </div>
+          <div className="text">
+            Nice Blog post
+          </div>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Take the react component and show it on the screen
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
